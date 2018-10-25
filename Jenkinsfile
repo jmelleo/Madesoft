@@ -1,4 +1,4 @@
-pipeline {
+﻿pipeline {
   agent any
   stages {
     stage('Paso 1: inicio') {
@@ -15,7 +15,7 @@ pipeline {
       // si no es la rama master entonces ejecuta la integración continua
       when { not { branch 'master' } }
       steps {
-        echo "Mensaje X"
+        echo "Mensaje XY"
         withCredentials([usernameColonPassword(credentialsId: '961fd8e1-9d6d-4c89-91a9-1d4269f50160', variable: 'key')]) {
           sh 'git remote set-url origin https://jmelleo:Blankis0926@github.com/jmelleo/Madesoft.git'
           sh 'git fetch origin'
