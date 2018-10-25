@@ -15,8 +15,8 @@ pipeline {
       // si no es la rama master entonces ejecuta la integración continua
       when { not { branch 'master' } }
       steps {
-        echo "entrando a hacer el pull request y merge"
-        withCredentials([sshUserPrivateKey(credentialsId: '20f8159b-d214-48c3-9f07-4ae2aa3af5a9', keyFileVariable: '', passphraseVariable: '', usernameVariable: '')]) {
+        echo "Mensaje X"
+        withCredentials([usernameColonPassword(credentialsId: '961fd8e1-9d6d-4c89-91a9-1d4269f50160', variable: 'key')]) {
           sh 'git remote set-url origin https://jmelleo:Blankis0926@github.com/jmelleo/Madesoft.git'
           sh 'git fetch origin'
           sh 'git checkout origin/master'
