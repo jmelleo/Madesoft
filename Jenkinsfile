@@ -1,4 +1,4 @@
-﻿pipeline {
+pipeline {
   agent any
   stages {
     stage('Paso 1: inicio') {
